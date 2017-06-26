@@ -11,7 +11,7 @@
                 <element label="Critical" sequence="3" value="Critical"/>
             </choice>
         </element>
-        <element label="Requested For" max_length="50" name="requested_for" reference="sys_user" type="string"/>
+        <element label="Requested For" max_length="32" name="requested_for" reference="sys_user" type="reference"/>
         <element label="Short Description" max_length="255" name="short_description" type="string"/>
         <element choice="3" default="New" label="State" max_length="40" name="state" type="choice">
             <choice>
