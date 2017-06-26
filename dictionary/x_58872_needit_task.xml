@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="x_58872_needit_request" label="Task" max_length="40" name="x_58872_needit_task" type="collection">
+        <element label="Additional" max_length="40" name="additional" type="string"/>
+        <element label="Assigned To" max_length="32" name="assigned_to" reference="sys_user" type="reference"/>
+        <element choice="1" label="Status" max_length="40" name="status" type="choice">
+            <choice/>
+        </element>
+        <index name="index">
+            <element name="assigned_to"/>
+        </index>
+    </element>
+</database>

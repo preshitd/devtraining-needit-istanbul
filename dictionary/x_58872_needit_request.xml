@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Request" max_length="40" name="x_58872_needit_request" type="collection">
+        <element label="Description" max_length="500" name="description" type="string"/>
+        <element default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element choice="3" default="Low" label="Priority" max_length="40" name="priority" type="choice">
+            <choice>
+                <element label="Low" sequence="0" value="Low"/>
+                <element label="Medium" sequence="1" value="Medium"/>
+                <element label="High" sequence="2" value="High"/>
+                <element label="Critical" sequence="3" value="Critical"/>
+            </choice>
+        </element>
+        <element label="Requested For" max_length="50" name="requested_for" reference="sys_user" type="string"/>
+        <element label="Short Description" max_length="255" name="short_description" type="string"/>
+        <element choice="3" default="New" label="State" max_length="40" name="state" type="choice">
+            <choice>
+                <element label="New" sequence="0" value="New"/>
+                <element label="Assigned" sequence="1" value="Assigned"/>
+                <element label="In Progress" sequence="2" value="In Progress"/>
+                <element label="Pending" sequence="3" value="Pending"/>
+                <element label="Completed" sequence="4" value="Completed"/>
+                <element label="Closed" sequence="5" value="Closed"/>
+            </choice>
+        </element>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element choice="1" label="What Needed" max_length="40" name="what_needed" type="choice">
+            <choice>
+                <element label="Hardware" sequence="0" value="Hardware"/>
+                <element label="Software" sequence="1" value="Software"/>
+                <element label="Antivirus" sequence="2" value="Antivirus"/>
+                <element label="Other" sequence="3" value="Other"/>
+            </choice>
+        </element>
+        <element label="When Needed" mandatory="true" max_length="40" name="when_needed" type="glide_date_time"/>
+    </element>
+</database>
