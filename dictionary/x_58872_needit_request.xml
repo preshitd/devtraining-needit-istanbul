@@ -33,5 +33,8 @@
             </choice>
         </element>
         <element label="When Needed" mandatory="true" max_length="40" name="when_needed" type="glide_date_time"/>
+        <index name="index">
+            <element name="requested_for"/>
+        </index>
     </element>
 </database>
